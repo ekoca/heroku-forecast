@@ -1,10 +1,13 @@
 {
-  "name": "angular-seed",
+  "name": "ekoca-forecast",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
+  "version": "0.0.3",
+  "description": "A really cool app with AngularJS",
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
+  "engines": {
+    "node": "0.12.x"
+  }
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "^1.1.1",
