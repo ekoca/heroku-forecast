@@ -1,5 +1,8 @@
 // ROUTES
-wheatherApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
+wheatherApp.config(['$routeProvider', '$analyticsProvider', function ($routeProvider, $analyticsProvider){
+    // turn off automatic tracking
+    //$analyticsProvider.virtualPageviews(false);
+
     $routeProvider
     .when('/',{
         templateUrl: 'pages/home.html',
@@ -12,7 +15,7 @@ wheatherApp.config(['$routeProvider', '$locationProvider', function ($routeProvi
     .when('/forecast/:days', {
         templateUrl: 'pages/forecast.html',
         controller: 'forecastController'
-    });
+    }).otherwise({ redirectTo: '/' });
 
     /*
     if(window.history && window.history.pushState){

@@ -18,20 +18,20 @@
         <script src="http://code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
         <script src="http://code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
         <script src="http://code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
-        <script src="app.js"></script>
-        <script src="route.js"></script>
-        <script src="services.js"></script>
-        <script src="controller.js"></script>
-        <script src="directives.js"></script>
-        
+        <script src="js/app.js"></script>
+        <script src="js/route.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/angulartics.js"></script>
+        <script src="js/angulartics-google-analytics.js"></script>        
         <script>
   			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   			ga('create', 'UA-22614977-2', 'auto');
-  			ga('send', 'pageview');
-
+  			//ga('send', 'pageview'); --> per documentation we don't need this!
 		</script>
     </head>
     <body>
@@ -40,11 +40,16 @@
 			<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">AngularJS Weather</a>
+                    
+					<a class="navbar-brand" href="/" analytics-on="click" analytics-event="Top Nav Left" analytics-category="Home">AngularJS Weather</a>
 				</div>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+					<li>
+                        <a href="#" analytics-on="click" analytics-event="Top Nav Right" analytics-category="Home">
+                            <i class="fa fa-home"></i> Home
+                        </a>
+                    </li>
 				</ul>
 			</div>
 			</nav>
