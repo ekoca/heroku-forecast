@@ -1,12 +1,12 @@
 <h1>The forecast for {{ city }}</h1>
 <hr/>
-Days: <a href="#/forecast/1" ng-class="{'bg-primary': days === '1'}" analytics-on="click" analytics-event="forecast-1" analytics-category="Forecast">1</a> | 
-<a href="#/forecast/2" ng-class="{'bg-primary': days === '2'}" analytics-on="click" analytics-event="forecast-2" analytics-category="Forecast">2</a> | 
-<a href="#/forecast/3" ng-class="{'bg-primary': days === '3'}" analytics-on="click" analytics-event="forecast-3" analytics-category="Forecast">3</a> | 
-<a href="#/forecast/4" ng-class="{'bg-primary': days === '4'}" analytics-on="click" analytics-event="forecast-4" analytics-category="Forecast">4</a> | 
-<a href="#/forecast/5" ng-class="{'bg-primary': days === '5'}" analytics-on="click" analytics-event="forecast-5" analytics-category="Forecast">5</a> | 
-<a href="#/forecast/6" ng-class="{'bg-primary': days === '6'}" analytics-on="click" analytics-event="forecast-6" analytics-category="Forecast">6</a> | 
-<a href="#/forecast/7" ng-class="{'bg-primary': days === '7'}" analytics-on="click" analytics-event="forecast-7" analytics-category="Forecast">7</a>
+Days: <a href="#/forecast/1" ng-class="{'bg-primary': days === '1'}" analytics-on analytics-event="forecast-1" analytics-category="Forecast">1</a> | 
+<a href="#/forecast/2" ng-class="{'bg-primary': days === '2'}" analytics-on analytics-event="forecast-2" analytics-category="Forecast">2</a> | 
+<a href="#/forecast/3" ng-class="{'bg-primary': days === '3'}" analytics-on analytics-event="forecast-3" analytics-category="Forecast">3</a> | 
+<a href="#/forecast/4" ng-class="{'bg-primary': days === '4'}" analytics-on analytics-event="forecast-4" analytics-category="Forecast">4</a> | 
+<a href="#/forecast/5" ng-class="{'bg-primary': days === '5'}" analytics-on analytics-event="forecast-5" analytics-category="Forecast">5</a> | 
+<a href="#/forecast/6" ng-class="{'bg-primary': days === '6'}" analytics-on analytics-event="forecast-6" analytics-category="Forecast">6</a> | 
+<a href="#/forecast/7" ng-class="{'bg-primary': days === '7'}" analytics-on analytics-event="forecast-7" analytics-category="Forecast">7</a>
 <hr/>
 <div ng-repeat="w in wheatherAPIResult.list">
     <div class="row">
