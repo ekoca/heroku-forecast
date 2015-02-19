@@ -17,7 +17,10 @@ wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider',
         controller: 'forecastController'
     }).otherwise({ redirectTo: '/' });
 
-    $locationProvider.hashPrefix('!').html5Mode(true);
+    if(window.history && window.history.pushState){
+        $locationProvider.hashPrefix('!').html5Mode(true);
+    }
+    
     /*
     if(window.history && window.history.pushState){
         $locationProvider.html5Mode({
