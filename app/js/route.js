@@ -1,5 +1,5 @@
 // ROUTES
-wheatherApp.config(['$routeProvider', '$analyticsProvider', function ($routeProvider, $analyticsProvider){
+wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider', function ($routeProvider, $analyticsProvider, $locationProvider){
     // Turn off automatic tracking
     $analyticsProvider.virtualPageviews(false);
 
