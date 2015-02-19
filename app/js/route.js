@@ -1,5 +1,5 @@
 // ROUTES
-wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider', function ($routeProvider, $analyticsProvider, $locationProvider){
+wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider', 'usSpinnerConfigProvider', function ($routeProvider, $analyticsProvider, $locationProvider, usSpinnerConfigProvider){
     // Turn off automatic tracking
     $analyticsProvider.virtualPageviews(false);
 
@@ -21,12 +21,5 @@ wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider',
         $locationProvider.hashPrefix('!').html5Mode(true);
     }
     
-    /*
-    if(window.history && window.history.pushState){
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: true
-        });
-    }
-    */
+    usSpinnerConfigProvider.setDefaults({color: 'black'});
 }]);

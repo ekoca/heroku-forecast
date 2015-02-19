@@ -1,9 +1,10 @@
 // Dependencies
 var appDependency = [
-    'ngRoute'
-    ,'ngResource'
-    ,'angulartics'
-    ,'angulartics.google.analytics'
+    'ngRoute',
+    'ngResource',
+    'angulartics',
+    'angulartics.google.analytics',
+    'angularSpinner',
 ] || appDependency;
 
 // Module

@@ -7,9 +7,10 @@ wheatherApp.controller('mainController', ['$scope', 'cityService', function($sco
     });
 }]);
 
-wheatherApp.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService){
+wheatherApp.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', 'usSpinnerService', function($scope, $resource, $routeParams, cityService, usSpinnerService){
     $scope.city = cityService.city;
     $scope.days = $routeParams.days || '1';
+    usSpinnerService.spin('spinner');
     
     $scope.wheatherAPI = 
         $resource("http://api.openweathermap.org/data/2.5/forecast/daily", 
@@ -21,12 +22,15 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
             }
         );
     
-    $scope.wheatherAPIResult = $scope.wheatherAPI.get(
+    $scope.wheatherAPI.get(
         {
             q: $scope.city, 
             cnt: $scope.days
         }
-    );
+    ).$promise.then(function(data) {
+        $scope.wheatherAPIResult = data;
+        usSpinnerService.stop('spinner');
+    });
 
     $scope.convertToCelsius = function(degK){
         return Math.round(degK - 273.15) + "C";
