@@ -37,9 +37,6 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
     ).$promise.then(function(data) {
         $scope.wheatherAPIResult = data;
         usSpinnerService.stop('spinner');
-    }, function(reason) {
-        alert('Failed: ' + reason);
-        usSpinnerService.stop('spinner');
     });
 
     $scope.convertToCelsius = function(degK){
