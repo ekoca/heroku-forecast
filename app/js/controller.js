@@ -20,6 +20,7 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
     usSpinnerService.spin('spinner');
     
     $scope.wheatherAPI = 
+        // They don't have secure protocal for this API
         $resource("http://api.openweathermap.org/data/2.5/forecast/daily", 
             {
                 Callback: "JSON_CALLBACK"
