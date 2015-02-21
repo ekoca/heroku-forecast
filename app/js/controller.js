@@ -20,7 +20,7 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
     usSpinnerService.spin('spinner');
     
     $scope.wheatherAPI = 
-        $resource("https://api.openweathermap.org/data/2.5/forecast/daily", 
+        $resource("//api.openweathermap.org/data/2.5/forecast/daily", 
             {
                 Callback: "JSON_CALLBACK"
             },
@@ -38,7 +38,8 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
         $scope.wheatherAPIResult = data;
         usSpinnerService.stop('spinner');
     }, function(reason) {
-        console.log('Failed: ' + reason);
+        console.log('Failed:');
+        console.log(reason);
         usSpinnerService.stop('spinner');
     });
 
