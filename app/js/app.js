@@ -5,6 +5,7 @@ var appDependency = [
     'angulartics',
     'angulartics.google.analytics',
     'angularSpinner',
+    'uiGmapgoogle-maps'
 ] || appDependency;
 
 // Module

@@ -8,6 +8,10 @@ wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider',
         templateUrl: 'pages/home.html',
         controller: 'mainController'
     })
+    .when('/maps', {
+        templateUrl: 'pages/maps.html',
+        controller: 'mainController'
+    })
     .when('/forecast', {
         templateUrl: 'pages/forecast.html',
         controller: 'forecastController'
@@ -20,6 +24,6 @@ wheatherApp.config(['$routeProvider', '$analyticsProvider', '$locationProvider',
     if(window.history && window.history.pushState){
         $locationProvider.hashPrefix('!').html5Mode(true);
     }
-    
+
     usSpinnerConfigProvider.setDefaults({color: 'black'});
 }]);

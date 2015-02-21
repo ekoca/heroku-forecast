@@ -5,6 +5,13 @@ wheatherApp.controller('mainController', ['$scope', 'cityService', function($sco
     $scope.$watch('city', function(){
         cityService.city = $scope.city;   
     });
+    $scope.Adress = "American University,4400 Massachusetts Ave NW,Washington, DC 20016";
+    $scope.Area = { 
+                    Name: "Melbourne", 
+                    Latitude: -37.8140000, 
+                    Longitude: 144.9633200 
+                  };
+    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 }]);
 
 wheatherApp.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', 'usSpinnerService', function($scope, $resource, $routeParams, cityService, usSpinnerService){

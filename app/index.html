@@ -13,12 +13,28 @@
             {
                 font-size: 1.05em !important;
             }
+
+            #areaMap, #addressMap
+            {
+                height: 400px;
+                width: 400px;
+                margin: 10px;
+                padding: 10px;
+            }
+            
+            .angular-google-map-container 
+            { 
+                height: 400px; 
+            }
         </style>
         
         <!-- load angular via CDN -->
+        <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src='bower_components/lodash/dist/lodash.min.js'></script>
+        <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
         <script src="bower_components/spin.js/spin.js"></script>
         <script src="js/app.js"></script>
         <script src="js/route.js"></script>
