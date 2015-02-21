@@ -6,9 +6,16 @@ app.listen(process.env.PORT || 3000);
 
 // Using a catch all route middleware in my node/Express server as follows (put it after the router)
 app.use(function(req, res) {
+	var schema = req.headers['x-forwarded-proto'];
+
+	if(schema === 'https') {
+		// Redirect to http...
+		res.redirect('http://' + req.headers.host + req.url);
+	}
     res.sendfile(__dirname + '/app/index.html');
 });
 
+/*
 app.use(function(req, res, next) {
   var schema = req.headers['x-forwarded-proto'];
 
@@ -21,3 +28,4 @@ app.use(function(req, res, next) {
     res.redirect('http://' + req.headers.host + req.url);
   }
 });
+*/
