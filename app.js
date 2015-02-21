@@ -10,8 +10,10 @@ app.use(function(req, res) {
 
 	if(schema === 'https') {
 		// Redirect to http...
+		console.log("HERE1");
 		res.redirect('http://' + req.headers.host + req.url);
 	}
+console.log("HERE2");
     res.sendfile(__dirname + '/app/index.html');
 });
 
