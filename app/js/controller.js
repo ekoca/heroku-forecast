@@ -20,7 +20,7 @@ wheatherApp.controller('forecastController', ['$scope', '$resource', '$routePara
     usSpinnerService.spin('spinner');
     
     $scope.wheatherAPI = 
-        $resource("//api.openweathermap.org/data/2.5/forecast/daily", 
+        $resource("https://api.openweathermap.org/data/2.5/forecast/daily", 
             {
                 Callback: "JSON_CALLBACK"
             },
