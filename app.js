@@ -8,12 +8,11 @@ app.listen(process.env.PORT || 3000);
 app.use(function(req, res) {
 	var schema = req.headers['x-forwarded-proto'];
 
+	// If it is https then redirect to http...
 	if(schema === 'https') {
-		// Redirect to http...
-		console.log("HERE1");
 		res.redirect('http://' + req.headers.host + req.url);
 	}
-console.log("HERE2");
+
     res.sendfile(__dirname + '/app/index.html');
 });
 
